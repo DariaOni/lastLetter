@@ -8,6 +8,6 @@ function lastLetter(string) {
 	return str.join(' ');
 }
 
-let rainbow = 'Richard of york gave battle in vain';
+let rainbow = 'Richard of york, gave battle in vain';
 
 lastLetter(rainbow);
