@@ -1,13 +1,17 @@
 function lastLetter(string) {
-	str = string.split(' ');
-
-	for (i = 0; i < str.length; i++) {
-		str[i] = str[i].charAt(str[i].length - 1).toUpperCase();
+	let str = string.split(' ');
+	// ['Richard', 'of', 'york', 'gave', 'battle', 'in', 'vain']
+	const arrLength = str.length;
+	for (i = 0; i < arrLength; i++) {
+		const strLength = str[i].length;
+		str[i] = str[i].slice(0, strLength - 1) + str[i].slice(-1).toUpperCase();
 	}
 
 	return str.join(' ');
 }
 
-let rainbow = 'Richard of york, gave battle in vain';
+function checkLastLetter(string) {}
+
+let rainbow = 'Richard of york gave battle in vain';
 
 lastLetter(rainbow);
