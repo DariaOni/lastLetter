@@ -1,4 +1,7 @@
 function lastLetter(string) {
+	if (checkLastLetter(string) === false) {
+		return;
+	}
 	let str = string.split(' ');
 	// ['Richard', 'of', 'york', 'gave', 'battle', 'in', 'vain']
 	const arrLength = str.length;
@@ -10,7 +13,9 @@ function lastLetter(string) {
 	return str.join(' ');
 }
 
-function checkLastLetter(string) {}
+function checkLastLetter(string) {
+	return typeof string === 'string';
+}
 
 let rainbow = 'Richard of york gave battle in vain';
 
