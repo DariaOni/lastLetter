@@ -14,6 +14,9 @@ function lastLetter(string) {
 }
 
 function checkLastLetter(str) {
+	if (str.length == 0) {
+		return;
+	}
 	console.log(`checkLastLetter param: ${str}`);
 
 	let symbols = 'abcdefghijklmnopqrstuvwxyz'; // ABC
