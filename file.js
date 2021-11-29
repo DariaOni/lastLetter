@@ -1,5 +1,5 @@
 function lastLetter(string) {
-	if (checkLastLetter(string) === false) {
+	if (checkLastLetter(string) === true) {
 		return;
 	}
 	let str = string.split(' ');
@@ -15,16 +15,14 @@ function lastLetter(string) {
 
 function checkLastLetter(string) {
 	let symbols = '~`!#$%^&*+=-[]\\\';,/{}|":<>?';
+	let lastEl = string.charAt(string.length - 1);
 
-	for (let i = 0; i < string.length; i++) {
-		if (symbols.indexOf(string.charAt(i)) != -1) {
-			return false;
-		} else {
-			return true;
-		}
+	if (symbols.includes(lastEl)) {
+		return true;
+	} else {
+		return false;
 	}
 }
-
-let rainbow = 'Rich:*ard of york gave battle in vain';
+let rainbow = 'Richard, of york gave battle in vain';
 
 lastLetter(rainbow);
