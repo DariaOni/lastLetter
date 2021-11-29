@@ -14,9 +14,28 @@ function lastLetter(string) {
 }
 
 function checkLastLetter(string) {
-	return typeof string === 'string';
+	let symbols = '~`!#$%^&*+=-[]\\\';,/{}|":<>?';
+
+	for (let i = 0; i < string.length; i++) {
+		if (symbols.indexOf(string.charAt(i) != -1)) {
+			return false;
+		}
+		return true;
+	}
 }
 
 let rainbow = 'Richard of york gave battle in vain';
 
 lastLetter(rainbow);
+
+function checkLastLetter(string) {
+	let symbols = '~`!#$%^&*+=-[]\\\';,/{}|":<>?';
+
+	for (let i = 0; i < string.length; i++) {
+		if (symbols.indexOf(string.charAt(i)) != -1) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+}
